@@ -1,2 +1,2 @@
-# SEG_3125_Assignment_1
+# SEG_3125_Lab_1
 Ayman Naciri 300143727
