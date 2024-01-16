@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>
-        body {
-            font-family:Verdana, Geneva, Tahoma, sans-serif;
-        }
-    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Lab1.css">
     <title>Document</title>
 </head>
-<body style="background-color: bisque;">
-    <h1><center>Survey</center></h1>
+<body style="background-color: rgb(48, 48, 48); font-size: 30px;">
+    <h1>Survey</h1>
+    <div class="container">
+        <button id="beginSurveyBtn">Begin Survey</button>
+        <div id="additionalText" class="hidden" style="font-size: 20px; text-align: left;">
+            <!-- Additional text to be revealed -->
+            <p>Please describe your overall experience with using the YouTube website.</p>
+            <input type="text" id="experienceInput" name="experienceInput" placeholder="Your response" style="width: 80%; padding: 5px; margin-top: 10px;">
+        </div>
+    </div>
+    <script src="Lab1.js"></script>
 </body>
 </html>
