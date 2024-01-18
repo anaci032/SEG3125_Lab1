@@ -1,16 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>
-        body {
-            font-family:Verdana, Geneva, Tahoma, sans-serif;
-        }
-    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="Lab1.css">
+    <title>Lab1</title>
 </head>
-<body style="background-color: bisque;">
-    <h1><center>Survey</center></h1>
+<body style="background-color: rgb(48, 48, 48); font-size: 30px;">
+    <h1>Survey</h1>
+    <div class="container">
+        <button id="beginSurveyBtn">Begin Survey</button>
+        <div id="additionalText" class="hidden" style="font-size: 18px; text-align: left;">
+            <!-- Additional text to be revealed -->
+            <p>Please describe your overall experience with using the YouTube website.</p>
+            <div class="input-container">
+                <input type="text" id="experienceInput2" name="experienceInput2" placeholder="Your response">
+            </div>
+
+            <!-- Question 1 -->
+            <br>
+            <p>1. Which of the following best describes your primary use of YouTube?</p>
+            <label><input type="radio" name="useOfYouTube" value="Entertainment"> Watching entertainment content</label><br>
+            <label><input type="radio" name="useOfYouTube" value="Education"> Educational purposes</label><br>
+            <label><input type="radio" name="useOfYouTube" value="News"> Keeping up with news and current events</label><br>
+            <label><input type="radio" name="useOfYouTube" value="Other" id="otherOption"> Other</label>
+            <div id="otherOptionInput" class="hidden">
+                <input type="text" id="experienceInput3" name="experienceInput3" placeholder="Your response">
+            </div>
+
+            <!-- Question 2 --><br>
+            
+                <p>2. How often do you encounter technical issues while using YouTube?</p>
+                <label><input type="radio" name="technicalIssues" value="Rarely"> Rarely</label><br>
+                <label><input type="radio" name="technicalIssues" value="Occasionally"> Occasionally</label><br>
+                <label><input type="radio" name="technicalIssues" value="Frequently"> Frequently</label><br>
+                <label><input type="radio" name="technicalIssues" value="Never"> Never</label>
+
+            <!-- Question 3 --><br>
+            
+                <p>3. Do you prefer captions to start automatically in every video: Yes/No?</p>
+                <label><input type="radio" name="autoCaptions" value="Yes"> Yes</label><br>
+                <label><input type="radio" name="autoCaptions" value="No"> No</label>
+            
+
+            <!-- Question 4 --><br>
+            
+                <p>4. Do you use YouTube in light mode or dark mode?</p>
+                <label><input type="radio" name="themePreference" value="Light" id="lightModeOption"> Light mode</label><br>
+                <label><input type="radio" name="themePreference" value="Dark" id="darkModeOption"> Dark mode</label>
+            
+            <!-- Question 5 --><br>
+            
+            <p>5. Which of the following categories do you use the most: Recommended, Top-news, shorts?</p>
+            <label><input type="checkbox" name="favoriteCategory" value="Recommended"> Recommended</label><br>
+            <label><input type="checkbox" name="favoriteCategory" value="TopNews"> Top-news</label><br>
+            <label><input type="checkbox" name="favoriteCategory" value="Shorts"> Shorts</label>
+        
+            <!-- Question 6 --><br>
+            
+                <p>6. Which type of video do you most often watch? (Select multiple)</p>
+                <label><input type="checkbox" name="videoType" value="LongVideos"> Long videos</label><br>
+                <label><input type="checkbox" name="videoType" value="Shorts"> Shorts</label><br>
+                <label><input type="checkbox" name="videoType" value="Others"> Others</label><br><br>
+                
+                <div class="input-container">
+                <input type="text" id="experienceInput" name="experienceInput" placeholder="Comments">
+                <div class="line"></div>
+        </div>
+    </div>
+    <script src="Lab1.js"></script>
 </body>
 </html>
