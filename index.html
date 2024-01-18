@@ -1,73 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.CSS">
-    <title>Lab1</title>
+  <title>YouTube Survey</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body style="background-color: rgb(48, 48, 48); font-size: 30px;">
-    <h1>Survey</h1>
-    <div class="container">
-        <button id="beginSurveyBtn">Begin Survey</button>
-        <div id="additionalText" class="hidden" style="font-size: 18px; text-align: left;">
-            <!-- Additional text to be revealed -->
-            <p>Please describe your overall experience with using the YouTube website.</p>
-            <div class="input-container">
-                <input type="text" id="experienceInput2" name="experienceInput2" placeholder="Your response">
-            </div>
+<body>
+  <div class="container">
+  <h1 class = "centerText">YouTube Survey</h1>
 
-            <!-- Question 1 -->
-            <br>
-            <p>1. Which of the following best describes your primary use of YouTube?</p>
-            <label><input type="radio" name="useOfYouTube" value="Entertainment"> Watching entertainment content</label><br>
-            <label><input type="radio" name="useOfYouTube" value="Education"> Educational purposes</label><br>
-            <label><input type="radio" name="useOfYouTube" value="News"> Keeping up with news and current events</label><br>
-            <label><input type="radio" name="useOfYouTube" value="Other" id="otherOption"> Other</label>
-            <div id="otherOptionInput" class="hidden">
-                <input type="text" id="experienceInput3" name="experienceInput3" placeholder="Your response">
-            </div>
+    <!-- WEBSITE IMAGE -->
+    <a href="https://www.youtube.com">
+        <img src="youtube.jpg" alt="Click here to visit the website" style="width: 100%; height: auto;">
+    </a>
+    <br><br><br>
 
-            <!-- Question 2 --><br>
-            
-                <p>2. How often do you encounter technical issues while using YouTube?</p>
-                <label><input type="radio" name="technicalIssues" value="Rarely"> Rarely</label><br>
-                <label><input type="radio" name="technicalIssues" value="Occasionally"> Occasionally</label><br>
-                <label><input type="radio" name="technicalIssues" value="Frequently"> Frequently</label><br>
-                <label><input type="radio" name="technicalIssues" value="Never"> Never</label>
+    <form action = "" method = "POST">
+      <!-- QUESTION 1 -->
+      <div>
+        <p>1. Please describe your overall experience with using the YouTube website:</p>
+        <textarea id="experience" name="experience" rows="4" cols="50"></textarea>
+      </div>
+      <br>
 
-            <!-- Question 3 --><br>
-            
-                <p>3. Do you prefer captions to start automatically in every video: Yes/No?</p>
-                <label><input type="radio" name="autoCaptions" value="Yes"> Yes</label><br>
-                <label><input type="radio" name="autoCaptions" value="No"> No</label>
-            
+      <!-- QUESTION 2-->
+      <div>
+        <p>2. Which type of video do you most often watch?</p>
+        <input type="checkbox" id="long" name="videoType" value="long" >
+        <label for="long">Long videos</label><br>
+        <input type="checkbox" id="shorts" name="videoType" value="shorts" >
+        <label for="shorts">Shorts</label><br>
+        <input type="checkbox" id="others" name="videoType" value="others" >
+        <label for="others">Others</label><br>
+      </div>
+      <br>
 
-            <!-- Question 4 --><br>
-            
-                <p>4. Do you use YouTube in light mode or dark mode?</p>
-                <label><input type="radio" name="themePreference" value="Light" id="lightModeOption"> Light mode</label><br>
-                <label><input type="radio" name="themePreference" value="Dark" id="darkModeOption"> Dark mode</label>
-            
-            <!-- Question 5 --><br>
-            
-            <p>5. Which of the following categories do you use the most: Recommended, Top-news, shorts?</p>
-            <label><input type="checkbox" name="favoriteCategory" value="Recommended"> Recommended</label><br>
-            <label><input type="checkbox" name="favoriteCategory" value="TopNews"> Top-news</label><br>
-            <label><input type="checkbox" name="favoriteCategory" value="Shorts"> Shorts</label>
-        
-            <!-- Question 6 --><br>
-            
-                <p>6. Which type of video do you most often watch? (Select multiple)</p>
-                <label><input type="checkbox" name="videoType" value="LongVideos"> Long videos</label><br>
-                <label><input type="checkbox" name="videoType" value="Shorts"> Shorts</label><br>
-                <label><input type="checkbox" name="videoType" value="Others"> Others</label><br><br>
-                
-                <div class="input-container">
-                <input type="text" id="experienceInput" name="experienceInput" placeholder="Comments">
-                <div class="line"></div>
-        </div>
-    </div>
-    <script src="script.js"></script>
+      <!-- QUESTION 3-->
+      <div>
+        <p>3. Which of the following best describes your primary use of YouTube?</p>
+        <input type="radio" id="entertainment" name="useType" value="entertainment" >
+        <label for="entertainment">Watching entertainment content</label><br>
+        <input type="radio" id="educational" name="useType" value="educational" >
+        <label for="educational">Educational purposes</label><br>
+        <input type="radio" id="news" name="useType" value="news" >
+        <label for="news">Keeping up with news and current events</label><br>
+      </div>
+      <br>
+
+      <!-- QUESTION 4 -->
+      <div>
+        <p>4. How often do you encounter technical issues while using YouTube?</p>
+        <input type="radio" id="rarely" name="techIssues" value="rarely" >
+        <label for="rarely">Rarely</label><br>
+        <input type="radio" id="occasionally" name="techIssues" value="occasionally" >
+        <label for="occasionally">Occasionally</label><br>
+        <input type="radio" id="frequently" name="techIssues" value="frequently" >
+        <label for="frequently">Frequently</label><br>
+        <input type="radio" id="never" name="techIssues" value="never" >
+        <label for="never">Never</label><br>
+      </div>
+      <br>
+
+      <!-- QUESTION 5 -->
+      <div>
+        <p>5. Do you prefer using YouTube's <b>light</b> mode or <b>dark</b> mode?</p>
+        <input type="radio" id="light" name="screenMode" value="light" >
+        <label for="rarely">Light Mode</label><br>
+        <input type="radio" id="dark" name="screenMode" value="dark" >
+        <label for="occasionally">Dark Mode</label><br>
+      </div>
+      <br>
+
+      <!-- QUESTION 6 -->
+      <div>
+        <p>6. Comments:</p>
+        <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+      </div>
+      <br><br>
+
+      <input type="submit" value="Submit">
+      <br><br><br>
+      
+    </form>
+  </div>
 </body>
 </html>
+
+<!-- Signature: Quoc Dat Phung, Ayman Naciri, Isam Karroum -->
