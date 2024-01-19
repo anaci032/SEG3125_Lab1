@@ -2,3 +2,4 @@
 
 Members:
 - Alexander Azizi-Martin
+- Ayman Naciri
