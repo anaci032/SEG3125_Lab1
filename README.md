@@ -3,3 +3,4 @@
 Members:
 - Alexander Azizi-Martin
 - Ayman Naciri
+- Quoc Dat Phung
